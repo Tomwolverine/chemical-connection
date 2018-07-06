@@ -8,11 +8,9 @@
 
 function getNerd(nerd) {
   const $li = document.createElement('li');
+  console.log(nerd);
   const $elements = [
-    // getImage(nerd.id, nerd.username),
-    getNameplate(nerd.id, nerd.username, nerd.faveElements),
-    // getMessage(nerd.message),
-    // getLink(nerd.name)
+    getNameplate(nerd.username, nerd.faveElements)
   ].forEach($element => $li.appendChild($element));
   document.querySelector('#nerds').appendChild($li);
 }
@@ -24,8 +22,8 @@ function getImage(id, altText) {
   return $image;
 }
 
-function getNameplate(name, phoneNumber) {
-  return getElement('span', `${name} - ${phoneNumber}`);
+function getNameplate(username, faveElements) {
+  return getElement('span', `${username} - ${faveElements}`);
 }
 
 function getMessage(message) {

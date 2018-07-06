@@ -1,10 +1,12 @@
 /* .jumbotron {
-  background: linear-gradient(rgba(167, 238, 183, 0.45), #1177fd 63), url("header.jpg");
+  background: linear-gradient(rgba(167, 238, 183, 0.45), #1177fd 63);
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: white !important;
 } */
-
+.btn {
+  margin-right:200px;
+}
 .hero {
   height: 450px;
   display: inline-flex;
@@ -12,7 +14,7 @@
   align-items: center;
   text-align: center;
   color: white;
-  background-image: url("/css/header.jpg");
+  background-image: linear-gradient(to bottom, rgba(27, 231, 119, 0.438) 0, rgba(43, 135, 221, 0.507)), url("/css/header.jpg");
   background-size: 100%;
   background-position: center top;
   background-repeat: no-repeat;
@@ -24,9 +26,15 @@
 
 #periodic {
   background-color: white;
-  width: 960px;
+  width: 1200px;
   margin: 0 auto;
   text-align: center;
+}
+
+.opening-title {
+  font-family: 'Dosis', sans-serif;
+  font-size: 65px;
+  
 }
 
 body {
