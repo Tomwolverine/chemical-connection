@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const data = require('./js/api');
+const port = parseInt(process.env.PORT || 8080);
 
 const app = express();
 app.use(cors({
@@ -38,4 +39,4 @@ app.get('/:id', function (request, response) {
   }
 });
 
-app.listen(8080, () => console.log('Listening on http://localhost:8080/'));
+app.listen(port, () => console.log('Listening on http://localhost:8080/'));
