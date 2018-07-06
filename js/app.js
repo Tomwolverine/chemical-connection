@@ -23,8 +23,12 @@ function getImage(id, altText) {
 }
 
 function getNameplate(username, faveElements) {
-  return getElement('span', `${username} - ${faveElements}`);
+  return getElement('span', `${username} - ${faveElements} - ${getRandomInt(100)}%`);
 }
+
+function getRandomInt(max){
+  return Math.floor(Math.random() * Math.floor(max));
+};
 
 function getMessage(message) {
   return getElement('p', message);
@@ -35,6 +39,8 @@ function getLink(name) {
   $a.href = `contact.html?nerd=${name}`;
   return $a;
 }
+
+
 
 function getElement(tagName, text) {
   const $element = document.createElement(tagName);
