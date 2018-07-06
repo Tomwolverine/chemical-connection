@@ -29,6 +29,12 @@
   text-align: center;
 }
 
+.opening-title {
+  font-family: 'Indie Flower', sans-serif;
+  font-size: 65px;
+  
+}
+
 body {
   font-family: Arial;
   -webkit-transform: translateZ(0);
