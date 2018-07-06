@@ -1,5 +1,5 @@
 /* .jumbotron {
-  background: linear-gradient(rgba(167, 238, 183, 0.45), #1177fd 63), url("header.jpg");
+  background: linear-gradient(rgba(167, 238, 183, 0.45), #1177fd 63);
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: white !important;
@@ -24,7 +24,7 @@
 
 #periodic {
   background-color: white;
-  width: 960px;
+  width: 1200px;
   margin: 0 auto;
   text-align: center;
 }
