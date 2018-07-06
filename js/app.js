@@ -40,8 +40,6 @@ function getLink(name) {
   return $a;
 }
 
-
-
 function getElement(tagName, text) {
   const $element = document.createElement(tagName);
   const $text = document.createTextNode(text);
