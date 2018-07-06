@@ -1,5 +1,5 @@
 (function initializePage() {
-  const apiUrl = 'https://quiet-bayou-99554.herokuapp.com/api/v1/contacts';
+  const apiUrl = 'https://chemical-connection.herokuapp.com/';
   fetch(apiUrl)
     .then(response => response.json())
     .then(response => response.data)
@@ -8,11 +8,9 @@
 
 function getNerd(nerd) {
   const $li = document.createElement('li');
+  console.log(nerd);
   const $elements = [
-    // getImage(nerd.id, nerd.username),
-    getNameplate(nerd.id, nerd.username, nerd.faveElements)
-    // getMessage(nerd.message),
-    // getLink(nerd.name)
+    getNameplate(nerd.username, nerd.faveElements)
   ].forEach($element => $li.appendChild($element));
   document.querySelector('#nerds').appendChild($li);
 }
@@ -24,9 +22,13 @@ function getImage(id, altText) {
   return $image;
 }
 
-function getNameplate(name, phoneNumber) {
-  return getElement('span', `${name} - ${phoneNumber}`);
+function getNameplate(username, faveElements) {
+  return getElement('span', `${username} - ${faveElements} - ${getRandomInt(100)}%`);
 }
+
+function getRandomInt(max){
+  return Math.floor(Math.random() * Math.floor(max));
+};
 
 function getMessage(message) {
   return getElement('p', message);
@@ -37,6 +39,8 @@ function getLink(name) {
   $a.href = `contact.html?nerd=${name}`;
   return $a;
 }
+
+
 
 function getElement(tagName, text) {
   const $element = document.createElement(tagName);
