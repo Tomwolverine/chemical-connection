@@ -10,10 +10,7 @@ function getNerd(nerd) {
   const $li = document.createElement('li');
   console.log(nerd);
   const $elements = [
-    // getImage(nerd.id, nerd.username),
-    getNameplate(nerd.username, nerd.faveElements),
-    // getMessage(nerd.message),
-    // getLink(nerd.name)
+    getNameplate(nerd.username, nerd.faveElements)
   ].forEach($element => $li.appendChild($element));
   document.querySelector('#nerds').appendChild($li);
 }
