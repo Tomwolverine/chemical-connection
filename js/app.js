@@ -1,5 +1,5 @@
 (function initializePage() {
-  const apiUrl = 'https://quiet-bayou-99554.herokuapp.com/api/v1/contacts';
+  const apiUrl = 'https://chemical-connection.herokuapp.com/';
   fetch(apiUrl)
     .then(response => response.json())
     .then(response => response.data)
