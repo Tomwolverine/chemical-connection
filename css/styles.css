@@ -4,7 +4,9 @@
   background-attachment: fixed;
   color: white !important;
 } */
-
+.btn {
+  margin-right:200px;
+}
 .hero {
   height: 450px;
   display: inline-flex;
