@@ -9,7 +9,7 @@
 function getNerd(nerd) {
   const $li = document.createElement('li');
   const $elements = [
-    getNameplate(nerd.id, nerd.username, nerd.faveElements)
+    getNerd(nerd.id, nerd.username, nerd.faveElements)
   ].forEach($element => $li.appendChild($element));
   document.querySelector('#nerds').appendChild($li);
 }
